@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Hola2.0 2023</Text>
-      <Button title='presionar'></Button>
+      <Button title='No me presiones'></Button>
       <StatusBar style="auto" />
     </View>
   );
