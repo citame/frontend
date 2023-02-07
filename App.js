@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View ,  Button} from 'react-native';
-
+import { storesRequest } from './src/services/stores/store.context';
 export default function App() {
   return (
     <View style={styles.container}>
@@ -19,7 +19,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-
-
-console.log("hiiiii")
