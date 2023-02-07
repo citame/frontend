@@ -1,15 +1,17 @@
-import {mocks} from './mock';
-export const storesRequest = (location = "41.878113,-87.629799") => {
-    return new Promise((resolve, reject) => {
-        const mock = mocks[location];
-        if(!mock){
-            reject("not found");
-        }
-        resolve(mock);
-    })
+import React, { useState, createContext, useEffect, useMemo } from 'react';
+
+import { storesRequest, storeTransform } from './store.service';
+
+export const StoresContext = createContext();
+
+export const StoresContexProvider = ({children}) => {
+    return (
+        <StoresContext.Provider 
+            value={{
+                stores: [1,2,3],
+            }}
+        >
+            {children}    
+        </StoresContext.Provider>
+    )
 }
-storesRequest().then((result) => {
-    console.log(result);
-}).catch((err) => {
-    console.log("error")
-});
