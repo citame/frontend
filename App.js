@@ -1,8 +1,11 @@
+import { StatusBar } from 'expo-status-bar';
+import { StoresContexProvider } from './src/services/stores/store.context';
+import { MapScreen } from './src/screens/map.screen';
 import React from 'react';
 import { View, Image, TouchableOpacity, TextInput, Text } from 'react-native';
 
 
-const Navbar = () => {
+const App = () => {
   return (
     <View style={styles.container}>
 
@@ -72,4 +75,4 @@ const styles = {
   },
 };
 
-export default Navbar;
+export default App;
